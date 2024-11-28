@@ -15,6 +15,20 @@ def contact(request):
     return render(request, 'uifiles/contact-us.html')
 def products(request):
     return render(request, 'uifiles/products.html')
+def Steelgreylight(request):
+    return render(request, 'uifiles/Steel-grey-light.html')
+def Steelgreydark(request):
+    return render(request, 'uifiles/Steel-grey-dark.html')
+def Steelgreylight(request):
+    return render(request, 'uifiles/Steel-grey-light.html')
+def Tanbrown(request):
+    return render(request, 'uifiles/Tanbrown.html')
+def Maplered(request):
+    return render(request, 'uifiles/Maple-red.html')
+def Blackpearl(request):
+    return render(request, 'uifiles/Black-pearl.html')
+def Galaxy(request):
+    return render(request, 'uifiles/Galaxy.html')
     
 def blogs(request):
     blog = BlogPost.objects.filter().order_by('-Id')
