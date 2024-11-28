@@ -1,0 +1,135 @@
+
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+    <!--Breadcrumb Banner -->
+    <div class="pq-breadcrumb bg-blog-details">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb">
+                        <div class="pq-breadcrumb-title">
+                            <h1>The Versatility of Tan Brown Granite</h1>
+                        </div>
+                        <div class="pq-breadcrumb-container">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="./"><i class="fas fa-home me-2"></i>Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="./blogs">Blogs</a>
+                                </li>
+                                <li class="breadcrumb-item active">The Versatility of Tan Brown Granite</li>
+                            </ol>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Banner -->
+
+    <!-- Blogs Details -->
+    <section class="blog-single">
+        <div class="container">
+            <div class="row justify-content-center">
+                {% if selectpost %}
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pq-blog-post">
+                                <div class="pq-post-media">
+                                    <img decoding="async" src="/media/{{selectpost.Image1}}" alt="Tan Brown blog-image">
+                                    <div class="pq-post-category">
+                                        <a href="./the-versatility-of-tan-brown-granite">{{selectpost.Stonename}}</a>
+                                    </div>
+                                </div>
+                                <div class="pq-blog-contain">
+                                    <div class="pq-post-meta">
+                                        <ul>
+                                            <li class="pq-post-meta">
+                                                <a href="./the-versatility-of-tan-brown-granite">{{selectpost.Create_at}}</a>
+                                            </li>
+                                            <li class="pq-post-comment">
+                                                <a href="./the-versatility-of-tan-brown-granite">9 Comments</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="pq-blog-title">
+                                        {{selectpost.Title}}
+                                    </h5>
+                                    <p> {{selectpost.Body|safe}}</p>
+                                    
+                                    <blockquote class="pq-mb-30">
+                                        <p>{{selectpost.quotationcontent}}</p>
+                                        <p><strong>– Admin, Stonehenge Granites</strong></p>
+                                    </blockquote>
+                                  
+                                </div> 
+                            </div>
+                            <div class="pq-single-post-bottom-holder">
+                                <div class="pq-single-post-left pq-single-post-info">
+                                    <div class="pq-single-post-tags"> 
+                                        <span class="pq-single-post-tags-title">Tags:</span>
+                                        <ul class="pq-single-post-tags-list">
+                                            <li class="pq-tags-share">
+                                                <a href="#"> {{selectpost.Tags}}</a>
+                                            </li>
+                                         
+                                        </ul>
+                                    </div>                                                                     
+                                </div>
+                                <div class="pq-single-post-right pq-single-post-info">
+                                    <div class="pq-single-post-social-share">
+                                        <span class="pq-single-post-social-title">Share:</span>
+                                        <ul class="pq-single-post-shortcode-list">
+                                            <li class="pq-facebook-share">
+                                                <a href="https://www.facebook.com" target="_blank"><span class="pq-share-link"><i class="fab fa-facebook-f"></i></span></a>
+                                            </li>
+                                            <li class="pq-instagram-share">
+                                                <a href="https://www.instagram.com" target="_blank"><span class="pq-share-link"><i class="fab fa-instagram"></i></span></a>
+                                            </li>
+                                            <li class="pq-twitter-share">
+                                                <a href="https://www.twitter.com" target="_blank"><span class="pq-share-link"><i class="fab fa-twitter"></i></span></a>
+                                            </li>
+                                            <li class="pq-youtube-share">
+                                                <a href="https://www.youtube.com" target="_blank"><span class="pq-share-link"><i class="fab fa-youtube"></i></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pq-single-post-navigation">
+                                <a class="pq-single-post-nav pq-prev" href="./transform-your-space-with-maple-red-granite">
+                                    <div class="pq-single-post-nav-image-holder">
+                                        <img src="images/blog/transform-your-space-with-maple-red-granite.webp" class="pq-single-post-nav-image wp-post-image" alt="post-img">
+                                    </div>
+                                    <div class="pq-single-post-nav-content">
+                                        <span class="pq-single-post-nav-label">Prev post</span>
+                                        <div class="pq-single-post-nav-title">
+                                            <h4>Transform Your Space with Maple Red Granite</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="pq-single-post-nav pq-next" href="./galaxy-granite-an-overview">
+                                    <div class="pq-single-post-nav-content">
+                                        <span class="pq-single-post-nav-label">Next post</span>
+                                        <div class="pq-single-post-nav-title">
+                                            <h4>Galaxy Granite: An Overview</h4>
+                                        </div>
+                                    </div>
+                                    <div class="pq-single-post-nav-image-holder">
+                                        <img src="images/blog/galaxy-granite-an-overview.webp" class="pq-single-post-nav-image wp-post-image" alt="post-img">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    <!-- Blogs Details -->
+
+    {% endblock %}  

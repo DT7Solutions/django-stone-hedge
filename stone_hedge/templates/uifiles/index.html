@@ -1,4 +1,6 @@
-
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
     <!-- Banner -->
     <div class="banner py-0">
         <!-- START home 5 REVOLUTION SLIDER 6.5.31 -->
@@ -10,8 +12,8 @@
                     <rs-slide style="position: absolute;" data-key="rs-43" data-title="Slide"
                         data-thumb="rev/assets/Banner-3-50x100.jpg" data-anim="adpr:false;ms:300;" data-in="o:0;"
                         data-out="a:false;">
-                        <img src="rev/assets/dummy.png" alt="" title="Banner-3" width="1920" height="1035"
-                            class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="rev/assets/Banner-3.jpg"
+                        <img src="{% static 'rev/assets/dummy.png' %}" alt="" title="Banner-3" width="1920" height="1035"
+                            class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="../../static/rev/assets/Banner-3.jpg"
                             data-parallax="off" data-no-retina>
                         <rs-layer id="slider-13-slide-43-layer-0" data-type="shape" data-rsp_ch="on"
                             data-xy="xo:28px,28px,20px,11px;y:m;yo:-166px,-125px,-116px,-85px;"
@@ -63,24 +65,24 @@
                             data-dim="w:507px,418px,317px,195px;h:625px,516px,392px,241px;" data-frame_0="sX:0.9;sY:0.9;"
                             data-frame_1="e:power2.inOut;st:300;sp:1000;sR:300;" data-frame_999="o:0;st:w;sR:7700;"
                             style="z-index:11;">
-                            <img src="rev/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload"
-                                width="466" height="574" data-lazyload="rev/assets/homepage-img3.webp" data-no-retina style="border-radius: 6px;">
+                            <img src="{% static 'rev/assets/dummy.png' %}" alt="" class="tp-rs-img rs-lazyload"
+                                width="466" height="574" data-lazyload="../../static/rev/assets/homepage-img3.webp" data-no-retina style="border-radius: 6px;">
                         </rs-layer>
                         <rs-layer id="slider-13-slide-43-layer-7" data-type="image" data-rsp_ch="on"
                             data-xy="x:r;xo:-226px,-80px,-60px,-37px;y:m;" data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
                             data-dim="w:385px,317px,240px,148px;h:501px,413px,313px,193px;" data-vbility="t,f,f,f"
                             data-frame_0="x:100%;" data-frame_0_mask="u:t;" data-frame_1="st:650;sp:1000;sR:650;"
                             data-frame_1_mask="u:t;" data-frame_999="o:0;st:w;sR:7350;" style="z-index:12;">
-                            <img src="rev/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload" width="352" height="458"
-                                data-lazyload="rev/assets/homepage-img4.webp" data-no-retina style="border-radius: 6px;">
+                            <img src="{% static 'rev/assets/dummy.png' %}" alt="" class="tp-rs-img rs-lazyload" width="352" height="458"
+                                data-lazyload="../../static/rev/assets/homepage-img4.webp" data-no-retina style="border-radius: 6px;">
                         </rs-layer>
                     </rs-slide>
 
                     <rs-slide style="position: absolute;" data-key="rs-45" data-title="Slide"
                         data-thumb="rev/assets/Banner-3-50x100.jpg" data-anim="adpr:false;ms:300;" data-in="o:0;"
                         data-out="a:false;">
-                        <img src="rev/assets/dummy.png" alt="" title="Banner-3" width="1920" height="1035"
-                            class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="rev/assets/Banner-3.jpg"
+                        <img src="{% static 'rev/assets/dummy.png' %}" alt="" title="Banner-3" width="1920" height="1035"
+                            class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="../../static/rev/assets/Banner-3.jpg"
                             data-parallax="off" data-no-retina>
                         <rs-layer id="slider-13-slide-43-layer-0" data-type="shape" data-rsp_ch="on"
                             data-xy="xo:28px,28px,20px,11px;y:m;yo:-166px,-125px,-116px,-85px;"
@@ -132,8 +134,8 @@
                             data-dim="w:507px,418px,317px,195px;h:625px,516px,392px,241px;" data-frame_0="sX:0.9;sY:0.9;"
                             data-frame_1="e:power2.inOut;st:300;sp:1000;sR:300;" data-frame_999="o:0;st:w;sR:7700;"
                             style="z-index:11;">
-                            <img src="rev/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload"
-                                width="466" height="574" data-lazyload="rev/assets/homepage-img.webp" data-no-retina style="border-radius: 6px;">
+                            <img src="{% static 'rev/assets/dummy.png' %}" alt="" class="tp-rs-img rs-lazyload"
+                                width="466" height="574" data-lazyload="../../static/rev/assets/homepage-img.webp" data-no-retina style="border-radius: 6px;">
                         </rs-layer>
                         <rs-layer id="slider-13-slide-45-layer-7" data-type="image" data-rsp_ch="on"
                             data-xy="x:r;xo:-226px,-80px,-60px,-37px;y:m;yo:-1px,0,0,0;"
@@ -141,8 +143,8 @@
                             data-dim="w:385px,317px,240px,148px;h:501px,413px,313px,193px;" data-vbility="t,f,f,f"
                             data-frame_0="x:100%;" data-frame_0_mask="u:t;" data-frame_1="st:650;sp:1000;sR:650;"
                             data-frame_1_mask="u:t;" data-frame_999="o:0;st:w;sR:7350;" style="z-index:12;">
-                            <img src="rev/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload" width="352" height="458"
-                                data-lazyload="rev/assets/homepage-img2.webp" data-no-retina style="border-radius: 6px;">
+                            <img src="{% static 'rev/assets/dummy.png' %}" alt="" class="tp-rs-img rs-lazyload" width="352" height="458"
+                                data-lazyload="../../static/rev/assets/homepage-img2.webp" data-no-retina style="border-radius: 6px;">
                         </rs-layer>
                     </rs-slide>
                 </rs-slides>
@@ -156,13 +158,13 @@
     <section class="about-us pq-about-section-padding">
         <div class="container">
             <div class="floating-image floating-image-right floating-image-5">
-                <img src="images/floating-images/2.png" alt="Premium Granite Products - Stonehenge Granites">
+                <img src="{% static 'images/floating-images/2.png' %}" alt="Premium Granite Products - Stonehenge Granites">
             </div>
             <div class="row">
                 <div class="col-xl-6">
                     <div class="about-us-img">
-                        <img src="images/about-us/about-black-galexy.png" class="pq-image3 wow animated fadeInLeft" alt="Black Galaxy Granite - Stonehenge Granites">
-                        <img src="images/about-us/about-black-galexy-2.png" class="pq-image4 wow animated zoomIn" alt="Close-up of Black Galaxy Granite - High Quality">
+                        <img src="{% static 'images/about-us/about-black-galexy.png' %}" class="pq-image3 wow animated fadeInLeft" alt="Black Galaxy Granite - Stonehenge Granites">
+                        <img src="{% static 'images/about-us/about-black-galexy-2.png' %}" class="pq-image4 wow animated zoomIn" alt="Close-up of Black Galaxy Granite - High Quality">
                     </div>
                 </div>
                 <div class="col-xl-6 mt-4 mt-xl-0 ps-xl-6 wow animated fadeInRight">
@@ -237,7 +239,7 @@
                         <div class="item">
                             <div class="pq-service-box pq-style-4">
                                 <div class="pq-service-img">
-                                    <img decoding="async" src="images/service/steel-grey-light.webp" alt="Steel Grey Light Granite - Stonehenge Granites">
+                                    <img decoding="async" src="{% static 'images/service/steel-grey-light.webp' %}" alt="Steel Grey Light Granite - Stonehenge Granites">
                                 </div>
                                 <div class="pq-service-box-title">
                                     <h5 class="pq-service-box-title pq-hover-none"><a href="./steel-grey-light">Steel Grey Light</a></h5>
@@ -261,7 +263,7 @@
                         <div class="item">
                             <div class="pq-service-box pq-style-4">
                                 <div class="pq-service-img">
-                                    <img decoding="async" src="images/service/steel-grey-dark.webp" alt="Steel Grey Dark Granite - Stonehenge Granites">
+                                    <img decoding="async" src="{% static 'images/service/steel-grey-dark.webp' %}" alt="Steel Grey Dark Granite - Stonehenge Granites">
                                 </div>
                                 <div class="pq-service-box-title">
                                     <h5 class="pq-service-box-title pq-hover-none"><a href="./steel-grey-dark">Steel Grey Dark</a></h5>
@@ -285,7 +287,7 @@
                         <div class="item">
                             <div class="pq-service-box pq-style-4">
                                 <div class="pq-service-img">
-                                    <img decoding="async" src="images/service/black-peral.webp" alt="Black Pearl Granite - Stonehenge Granites">
+                                    <img decoding="async" src="{% static 'images/service/black-peral.webp' %}" alt="Black Pearl Granite - Stonehenge Granites">
                                 </div>
                                 <div class="pq-service-box-title">
                                     <h5 class="pq-service-box-title pq-hover-none"><a href="./black-pearl">Black Pearl</a></h5>
@@ -309,7 +311,7 @@
                         <div class="item">
                             <div class="pq-service-box pq-style-4">
                                 <div class="pq-service-img">
-                                    <img decoding="async" src="images/service/maple-red.webp" alt="Maple Red Granite - Stonehenge Granites">
+                                    <img decoding="async" src="{% static 'images/service/maple-red.webp' %}" alt="Maple Red Granite - Stonehenge Granites">
                                 </div>
                                 <div class="pq-service-box-title">
                                     <h5 class="pq-service-box-title pq-hover-none"><a href="./maple-red">Maple Red</a></h5>
@@ -333,7 +335,7 @@
                         <div class="item">
                             <div class="pq-service-box pq-style-4">
                                 <div class="pq-service-img">
-                                    <img decoding="async" src="images/service/tan-brown.webp" alt="Tan Brown Granite - Stonehenge Granites">
+                                    <img decoding="async" src="{% static 'images/service/tan-brown.webp' %}" alt="Tan Brown Granite - Stonehenge Granites">
                                 </div>
                                 <div class="pq-service-box-title">
                                     <h5 class="pq-service-box-title pq-hover-none"><a href="./tan-brown">Tan Brown</a></h5>
@@ -357,7 +359,7 @@
                         <div class="item">
                             <div class="pq-service-box pq-style-4">
                                 <div class="pq-service-img">
-                                    <img decoding="async" src="images/service/black-galaxy.webp" alt="Black Galaxy Granite - Stonehenge Granites">
+                                    <img decoding="async" src="{% static 'images/service/black-galaxy.webp' %}" alt="Black Galaxy Granite - Stonehenge Granites">
                                 </div>
                                 <div class="pq-service-box-title">
                                     <h5 class="pq-service-box-title pq-hover-none"><a href="./galaxy">Galaxy</a></h5>
@@ -416,7 +418,7 @@
                             <div class="pq-portfoliobox-3">
                                 <div class="pq-portfolio-img">
                                     <a href="./products">
-                                        <img decoding="async" src="images/gallery/creation-image-4.webp" alt="Indoor Court with Black Galaxy Granite Flooring">
+                                        <img decoding="async" src="{% static 'images/gallery/creation-image-4.webp' %}" alt="Indoor Court with Black Galaxy Granite Flooring">
                                     </a>
                                 </div>
                                 <div class="pq-portfolio-info">
@@ -432,7 +434,7 @@
                             <div class="pq-portfoliobox-3">
                                 <div class="pq-portfolio-img">
                                     <a href="./products">
-                                        <img decoding="async" src="images/gallery/creation-image-3.webp" alt="Reception Desk Featuring Steel Grey Dark Granite">
+                                        <img decoding="async" src="{% static 'images/gallery/creation-image-3.webp' %}" alt="Reception Desk Featuring Steel Grey Dark Granite">
                                     </a>
                                 </div>
                                 <div class="pq-portfolio-info">
@@ -448,7 +450,7 @@
                             <div class="pq-portfoliobox-3">
                                 <div class="pq-portfolio-img">
                                     <a href="./products">
-                                        <img decoding="async" src="images/gallery/creation-image-1.webp" alt="Open Kitchen with Tan Brown Granite Countertops">
+                                        <img decoding="async" src="{% static 'images/gallery/creation-image-1.webp' %}" alt="Open Kitchen with Tan Brown Granite Countertops">
                                     </a>
                                 </div>
                                 <div class="pq-portfolio-info">
@@ -464,7 +466,7 @@
                             <div class="pq-portfoliobox-3">
                                 <div class="pq-portfolio-img">
                                     <a href="./products">
-                                        <img decoding="async" src="images/gallery/creation-image-2.webp" alt="Modern Kitchen Featuring Steel Grey Light Granite">
+                                        <img decoding="async" src="{% static 'images/gallery/creation-image-2.webp' %}" alt="Modern Kitchen Featuring Steel Grey Light Granite">
                                     </a>
                                 </div>
                                 <div class="pq-portfolio-info">
@@ -582,7 +584,7 @@
                                         </div>
                                         <div class="pq-testimonial-media">
                                             <div class="pq-testimonial-img">
-                                                <img decoding="async" src="images/testimonial/reviews-1.png" alt="Testimonial-image">
+                                                <img decoding="async" src="{% static 'images/testimonial/reviews-1.png' %}" alt="Testimonial-image">
                                             </div>
                                             <div class="pq-testimonial-meta">
                                                 <h5 class="pq-testmonial-title">Rahul Sharma</h5>
@@ -610,7 +612,7 @@
                                         </div>
                                         <div class="pq-testimonial-media">
                                             <div class="pq-testimonial-img">
-                                                <img decoding="async" src="images/testimonial/reviews-2.png" alt="Testimonial-image">
+                                                <img decoding="async" src="{% static 'images/testimonial/reviews-2.png' %}" alt="Testimonial-image">
                                             </div>
                                             <div class="pq-testimonial-meta">
                                                 <h5 class="pq-testmonial-title">Sunita Verma</h5>
@@ -637,7 +639,7 @@
                                         </div>
                                         <div class="pq-testimonial-media">
                                             <div class="pq-testimonial-img">
-                                                <img decoding="async" src="images/testimonial/reviews-3.png" alt="Testimonial-image">
+                                                <img decoding="async" src="{% static 'images/testimonial/reviews-3.png' %}" alt="Testimonial-image">
                                             </div>
                                             <div class="pq-testimonial-meta">
                                                 <h5 class="pq-testmonial-title">Anil Kumar</h5>
@@ -709,7 +711,7 @@
     <section class="blog">
         <div class="container">
             <div class="floating-image floating-image-left floating-image-4">
-                <img src="images/floating-images/4.png" alt="blogs floating Image">
+                <img src="{% static 'images/floating-images/4.png' %}" alt="blogs floating Image">
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-8 wow animated fadeInRight">
@@ -742,7 +744,7 @@
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="images/blog/why-choose-steel-grey-light-granite-for-your-home.webp" alt="Steel Grey Light Granite Blogs">
+                                        <img decoding="async" src="{% static 'images/blog/why-choose-steel-grey-light-granite-for-your-home.webp' %}" alt="Steel Grey Light Granite Blogs">
                                         <div class="pq-post-category">
                                             <a href="./why-choose-steel-grey-light-granite-for-your-home">Steel Grey Light</a>
                                         </div>
@@ -798,7 +800,7 @@
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="images/blog/exploring-the-elegance-of-steel-grey-dark-granite.webp" alt="Steel Grey Dark Granite Blogs">
+                                        <img decoding="async" src="{% static 'images/blog/exploring-the-elegance-of-steel-grey-dark-granite.webp' %}" alt="Steel Grey Dark Granite Blogs">
                                         <div class="pq-post-category">
                                             <a href="./exploring-the-elegance-of-steel-grey-dark-granite">Steel Grey Dark</a>
                                         </div>
@@ -854,7 +856,7 @@
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="images/blog/black-pearl-granite-the-ultimate-guide.webp" alt="Black Pearl Granite Blogs">
+                                        <img decoding="async" src="{% static 'images/blog/black-pearl-granite-the-ultimate-guide.webp' %}" alt="Black Pearl Granite Blogs">
                                         <div class="pq-post-category">
                                             <a href="./black-pearl-granite-the-ultimate-guide">Black Pearl</a>
                                         </div>
@@ -910,7 +912,7 @@
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="images/blog/transform-your-space-with-maple-red-granite.webp" alt="Maple Red Granite Blogs">
+                                        <img decoding="async" src="{% static 'images/blog/transform-your-space-with-maple-red-granite.webp' %}" alt="Maple Red Granite Blogs">
                                         <div class="pq-post-category">
                                             <a href="./transform-your-space-with-maple-red-granite">Maple Red</a>
                                         </div>
@@ -966,7 +968,7 @@
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="images/blog/the-versatility-of-tan-brown-granite.webp" alt="Tan Brown Granite Blogs">
+                                        <img decoding="async" src="{% static 'images/blog/the-versatility-of-tan-brown-granite.webp' %}" alt="Tan Brown Granite Blogs">
                                         <div class="pq-post-category">
                                             <a href="./the-versatility-of-tan-brown-granite">Tan Brown</a>
                                         </div>
@@ -1022,7 +1024,7 @@
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="images/blog/galaxy-granite-an-overview.webp" alt="Galaxy Granite Blogs">
+                                        <img decoding="async" src="{% static 'images/blog/galaxy-granite-an-overview.webp' %}" alt="Galaxy Granite Blogs">
                                         <div class="pq-post-category">
                                             <a href="./galaxy-granite-an-overview">Galaxy</a>
                                         </div>
@@ -1082,3 +1084,4 @@
         </div>
     </section>
     <!-- Blog -->
+    {% endblock %}  
