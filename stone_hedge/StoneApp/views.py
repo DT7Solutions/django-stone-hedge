@@ -13,6 +13,9 @@ def about(request):
 
 def contact(request):
     return render(request, 'uifiles/contact-us.html')
+def products(request):
+    return render(request, 'uifiles/products.html')
+    
 def blogs(request):
     blog = BlogPost.objects.filter().order_by('-Id')
     
