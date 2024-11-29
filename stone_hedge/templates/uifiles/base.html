@@ -7,17 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Stonehenge Granites | Premium Granite & Natural Stone Supplier in India</title>
+    <title>{% block title %} {% endblock title%}</title>
     <meta name="title" content="Best Granite Supplier in India | Stonehenge Granites | High-Quality Natural Stones">
     <meta name="description" content="Explore Stonehenge Granites for top-quality granite and natural stones like Steel Grey, Black Pearl, and Tan Brown. Perfect for flooring, countertops, and interiors. Affordable prices with exceptional service.">
     <meta name="keywords" content="Stonehenge Granites, granite supplier india, granite stones, natural stone supplier, steel grey granite, black pearl granite, tan brown granite, granite countertops, granite flooring, granite installation, affordable granite india, granite manufacturer, premium granite, granite supplier, granite slabs, stone products, natural stone, construction materials, interior granite, exterior granite">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     
-
     <!-- Rev-slider -->
     <link rel="stylesheet" href="{% static 'rev/css/rs6.css' %}">
     <link rel="stylesheet" href="{% static 'rev/fonts/font-awesome/css/font-awesome.css' %}">
@@ -102,45 +101,45 @@
                         <div class="row no-gutters">
                             <div class="col-lg-12">
                                 <nav class="navbar navbar-expand-lg navbar-light">
-                                    <a class="navbar-brand" href="./">
+                                    <a class="navbar-brand" href="/">
                                         <img class="img-fluid logo" src="{% static 'images/Logo/logo.png' %}" alt="Stonehenge Granites - Granite Supplier">
                                     </a>
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <div id="pq-menu-contain" class="pq-menu-contain">
                                             <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                                <li class="menu-item current-menu-item">
-                                                    <a href="./">Home</a>
+                                                <li class="menu-item {% if navbar == 'Home' %} current-menu-item {% endif %}">
+                                                    <a href="/">Home</a>
                                                 </li>
-                                                <li class="menu-item">
+                                                <li class="menu-item {% if navbar == 'About' %} current-menu-item {% endif %}">
                                                     <a href="/about/">About</a>
                                                 </li>
-                                                <li class="menu-item menu-item-has-children">
+                                                <li class="menu-item menu-item-has-children {% if navbar == 'Products' %} current-menu-item {% endif %}">
                                                     <a href="/products/" aria-current="page">Products</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
                                                     <ul class="sub-menu">
-                                                        <li class="menu-item">
-                                                            <a href="/steelgreylight/" aria-current="page">Steel Grey Light</a>
+                                                        <li class="menu-item {% if navbar == 'Steelgraylight' %} current-menu-item a {% endif %}">
+                                                            <a href="/steel-grey-light/" aria-current="page">Steel Grey Light</a>
                                                         </li>
-                                                        <li class="menu-item">
-                                                            <a href="/steelgreydark/">Steel Grey Dark</a>
+                                                        <li class="menu-item {% if navbar == 'Steelgraydark' %} current-menu-item a {% endif %}">
+                                                            <a href="/steel-grey-dark/">Steel Grey Dark</a>
                                                         </li>
-                                                        <li class="menu-item">
-                                                            <a href="/blackpearl/">Black Pearl</a>
+                                                        <li class="menu-item {% if navbar == 'Blackpearl' %} current-menu-item a {% endif %}">
+                                                            <a href="/black-pearl/">Black Pearl</a>
                                                         </li>
-                                                        <li class="menu-item">
-                                                            <a href="/maplered/">Maple Red</a>
+                                                        <li class="menu-item {% if navbar == 'Maplered' %} current-menu-item a {% endif %}">
+                                                            <a href="/maple-red/">Maple Red</a>
                                                         </li>
-                                                        <li class="menu-item">
-                                                            <a href="/tanbrown/">Tan Brown</a>
+                                                        <li class="menu-item {% if navbar == 'Tanbrown' %} current-menu-item a {% endif %}">
+                                                            <a href="/tan-brown/">Tan Brown</a>
                                                         </li>
-                                                        <li class="menu-item">
+                                                        <li class="menu-item {% if navbar == 'Galaxy' %} current-menu-item a {% endif %}">
                                                             <a href="/galaxy/">Galaxy</a>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item">
+                                                <li class="menu-item {% if navbar == 'Blogs' %} current-menu-item {% endif %}">
                                                     <a href="/blogs/">Blogs</a>
                                                 </li>
-                                                <li class="menu-item">
+                                                <li class="menu-item {% if navbar == 'Contact' %} current-menu-item {% endif %}">
                                                     <a href="/contact/">Contact</a>
                                                 </li>
                                             </ul>
@@ -168,8 +167,6 @@
     {% block content %}
     
     {% endblock %}
-
-
 
     
     <!-- Footer -->
@@ -201,7 +198,7 @@
                                 <div class="menu-navigate-menu-container">
                                     <ul id="menu-navigate-menu" class="menu">
                                         <li class="menu-item">
-                                            <a href="./" aria-current="page">Home</a>
+                                            <a href="/" aria-current="page">Home</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="/about/">About Us</a>
@@ -210,10 +207,10 @@
                                             <a href="/products/">Our Services</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./blogs">Blogs</a>
+                                            <a href="/blogs/">Blogs</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./contact-us">Contact</a>
+                                            <a href="/contact/">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -226,22 +223,22 @@
                                 <div class="menu-product-menu-container">
                                     <ul id="menu-product-menu" class="menu">
                                         <li class="menu-item">
-                                            <a href="./steel-grey-light">Steel Grey Light Granite</a>
+                                            <a href="/steel-grey-light/">Steel Grey Light Granite</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./steel-grey-dark">Steel Grey Dark Granite</a>
+                                            <a href="/steel-grey-dark/">Steel Grey Dark Granite</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./black-pearl">Black Pearl Granite</a>
+                                            <a href="/black-pearl/">Black Pearl Granite</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./maple-red">Maple Red Granite</a>
+                                            <a href="/maple-red/">Maple Red Granite</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./tan-brown">Tan Brown Granite</a>
+                                            <a href="/tan-brown/">Tan Brown Granite</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="./galaxy">Galaxy Granite</a>
+                                            <a href="/galaxy/">Galaxy Granite</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -284,7 +281,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 align-self-center">
-                            <span class="pq-copyright">Copyright 2024 <a href="./"><strong>Stonehenge Granites</strong></a> All Rights Reserved | Designed By <a href="https://dt7.agency/" target="_blank"><strong>DT7.Agency</strong></a></span>
+                            <span class="pq-copyright">Copyright 2024 <a href="/"><strong>Stonehenge Granites</strong></a> All Rights Reserved | Designed By <a href="https://dt7.agency/" target="_blank"><strong>DT7.Agency</strong></a></span>
                         </div>
                     </div>
                 </div>
@@ -303,7 +300,6 @@
 
     <!-- Jquery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.js' %}"></script>
     <!-- Bootstrap -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- Owl Carousel -->

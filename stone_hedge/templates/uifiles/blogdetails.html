@@ -2,6 +2,7 @@
 {% extends 'uifiles/base.html' %}
 {% load static %}
 {% block content %}
+
     <!--Breadcrumb Banner -->
     <div class="pq-breadcrumb bg-blog-details">
         <div class="container">
@@ -14,10 +15,10 @@
                         <div class="pq-breadcrumb-container">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="./"><i class="fas fa-home me-2"></i>Home</a>
+                                    <a href="/"><i class="fas fa-home me-2"></i>Home</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="./blogs">Blogs</a>
+                                    <a href="/blogs/">Blogs</a>
                                 </li>
                                 <li class="breadcrumb-item active">The Versatility of Tan Brown Granite</li>
                             </ol>
@@ -41,17 +42,17 @@
                                 <div class="pq-post-media">
                                     <img decoding="async" src="/media/{{selectpost.Image1}}" alt="Tan Brown blog-image">
                                     <div class="pq-post-category">
-                                        <a href="./the-versatility-of-tan-brown-granite">{{selectpost.Stonename}}</a>
+                                        <a href="/blog/{{blogitem.Sluglink}}/">{{selectpost.Stonename}}</a>
                                     </div>
                                 </div>
                                 <div class="pq-blog-contain">
                                     <div class="pq-post-meta">
                                         <ul>
                                             <li class="pq-post-meta">
-                                                <a href="./the-versatility-of-tan-brown-granite">{{selectpost.Create_at}}</a>
+                                                <a href="/blog/{{blogitem.Sluglink}}/">{{selectpost.Create_at}}</a>
                                             </li>
                                             <li class="pq-post-comment">
-                                                <a href="./the-versatility-of-tan-brown-granite">9 Comments</a>
+                                                <a href="/blog/{{blogitem.Sluglink}}/">9 Comments</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -102,7 +103,7 @@
                             <div class="pq-single-post-navigation">
                                 <a class="pq-single-post-nav pq-prev" href="./transform-your-space-with-maple-red-granite">
                                     <div class="pq-single-post-nav-image-holder">
-                                        <img src="images/blog/transform-your-space-with-maple-red-granite.webp" class="pq-single-post-nav-image wp-post-image" alt="post-img">
+                                        <img src="{% static 'images/blog/transform-your-space-with-maple-red-granite.webp' %}" class="pq-single-post-nav-image wp-post-image" alt="post-img">
                                     </div>
                                     <div class="pq-single-post-nav-content">
                                         <span class="pq-single-post-nav-label">Prev post</span>
@@ -119,7 +120,7 @@
                                         </div>
                                     </div>
                                     <div class="pq-single-post-nav-image-holder">
-                                        <img src="images/blog/galaxy-granite-an-overview.webp" class="pq-single-post-nav-image wp-post-image" alt="post-img">
+                                        <img src="{% static 'images/blog/galaxy-granite-an-overview.webp' %}" class="pq-single-post-nav-image wp-post-image" alt="post-img">
                                     </div>
                                 </a>
                             </div>
@@ -132,4 +133,4 @@
     </section>
     <!-- Blogs Details -->
 
-    {% endblock %}  
+{% endblock %}  

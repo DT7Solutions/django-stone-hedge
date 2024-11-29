@@ -1,6 +1,13 @@
+<meta name="title" content="Tan Brown Granite | Premium Granite Supplier | Stonehenge Granites">
+<meta name="description" content="Discover Tan Brown Granite, known for its rich hues and durability. Perfect for countertops, flooring, and outdoor applications. Available at Stonehenge Granites, India's trusted natural stone supplier.">
+<meta name="keywords" content="Tan Brown granite, granite supplier India, granite stones, natural stone supplier, tan brown granite, granite countertops, granite flooring, granite installation, high-quality granite, granite slabs, granite for kitchen, durable granite, granite manufacturer, granite surfaces, home decor granite, construction materials"> 
+
 {% extends 'uifiles/base.html' %}
+{% block title %}Tan Brown Granite | Elegant & Durable Natural Stone by Stonehenge Granites{% endblock title %}
+
 {% load static %}
 {% block content %}
+
     <!--Breadcrumb Banner -->
     <div class="pq-breadcrumb bg-tb">
         <div class="container">
@@ -13,10 +20,10 @@
                         <div class="pq-breadcrumb-container">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="./"><i class="fas fa-home me-2"></i>Home</a>
+                                    <a href="/"><i class="fas fa-home me-2"></i>Home</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="./products">Products</a>
+                                    <a href="/products/">Products</a>
                                 </li>
                                 <li class="breadcrumb-item active">Tan Brown Granite</li>
                             </ol>
@@ -53,7 +60,7 @@
                     <!-- First Image Section with optimized alt text -->
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
-                            <img src="images/products/all-granite-product-collection.webp" alt="Tan Brown Granite Collection - Premium Quality Stones">
+                            <img src="{% static 'images/products/all-granite-product-collection.webp' %}" alt="Tan Brown Granite Collection - Premium Quality Stones">
                         </div>
                         <div class="col-lg-6 col-md-6 mt-4 mt-md-0 pq-px-30">
                             <h4 class="pq-title">Tan Brown Granite Collection</h4>
@@ -139,4 +146,4 @@
     </section>                
     <!-- Services Details -->
 
-    {% endblock %}  
+{% endblock %}  

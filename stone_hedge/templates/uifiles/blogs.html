@@ -1,4 +1,10 @@
+<meta name="title" content="Granite Insights & Tips | Stonehenge Granites | Premium Stone Supplier in India">
+<meta name="description" content="Stay updated with Stonehenge Granites' blogs for insights on granite types, installation tips, and design ideas. Learn about Steel Grey, Black Pearl, and Tan Brown for your next project.">
+<meta name="keywords" content="Stonehenge Granites, granite blogs, granite tips, natural stone insights, steel grey granite, black pearl granite, tan brown granite, granite installation, home decor ideas, premium granite, granite maintenance, stone supplier in India, granite trends, interior design granite, exterior granite applications">    
+
 {% extends 'uifiles/base.html' %}
+{% block title %}Stonehenge Granites Blogs | Insights on Premium Granite & Natural Stone{% endblock title %}
+
 {% load static %}
 {% block content %}
 
@@ -14,7 +20,7 @@
                         <div class="pq-breadcrumb-container">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="./"><i class="fas fa-home me-2"></i>Home</a>
+                                    <a href="/"><i class="fas fa-home me-2"></i>Home</a>
                                 </li>
                                 <li class="breadcrumb-item active">Blogs</li>
                             </ol>
@@ -33,34 +39,35 @@
                 <div class="col-lg-12">
                     <div class="pq-blog pq-blog-col-3">
                         <div class="row">
+
                             {% for blogitem in blog %} 
                             <div class="col-lg-4">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="/media/{{blogitem.Image1}}" alt="Steel Grey Light Granite Blogs">
+                                        <img decoding="async" src="/media/{{blogitem.Image1}}" alt="Granite Blogs Image">
                                         <div class="pq-post-category">
-                                            <a href="./why-choose-steel-grey-light-granite-for-your-home">{{blogitem.Stonename}}</a>
+                                            <a href="/blog/{{blogitem.Sluglink}}/">{{blogitem.Stonename}}</a>
                                         </div>
                                     </div>
                                     <div class="pq-blog-contain">
                                         <div class="pq-post-meta">
                                             <ul>
                                                 <li class="pq-post-meta">
-                                                    <a href="./why-choose-steel-grey-light-granite-for-your-home">{{blogitem.Create_at}}</a>
+                                                    <a href="/blog/{{blogitem.Sluglink}}/">{{blogitem.Create_at}}</a>
                                                 </li>
                                                 <li class="pq-post-comment">
-                                                    <a href="./why-choose-steel-grey-light-granite-for-your-home">5 Comments</a>
+                                                    <a href="/blog/{{blogitem.Sluglink}}/">5 Comments</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <h5 class="pq-blog-title">
-                                            <a href="./why-choose-steel-grey-light-granite-for-your-home">
+                                            <a href="/blog/{{blogitem.Sluglink}}/">
                                                 {{blogitem.Title}}
                                             </a>
                                         </h5>
                                         <p>Discover the unique features and benefits of Steel Grey Light granite, a top choice for modern homes.</p>
                                         <div class="pq-btn-container">
-                                            <a href="/blog/{{blogitem.Sluglink}}"
+                                            <a href="/blog/{{blogitem.Sluglink}}/"
                                                 class="pq-button pq-button-link">
                                                 <div class="pq-button-block">
                                                     <div class="pq-svg">
@@ -90,9 +97,6 @@
                                     </div>
                                 </div>
                             </div>
-                          
-                        
-                            
                             {% endfor %}
                             
                         <div class="pq-pagination d-flex justify-content-center">
@@ -111,4 +115,4 @@
     </section>
     <!-- end blogs sections  -->
    
-    {% endblock %}    
+{% endblock %}    

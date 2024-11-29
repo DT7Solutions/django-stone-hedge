@@ -2162,7 +2162,7 @@ header#pq-header .pq-bottom-header {
 }
 
 header#pq-header .pq-bottom-header .navbar {
-	padding: 0;
+	padding: 1% 0%;
 }
 
 header#pq-header .pq-bottom-header .navbar .pq-menu-contain {

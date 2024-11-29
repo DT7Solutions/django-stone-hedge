@@ -1,7 +1,13 @@
+<meta name="title" content="Black Pearl Granite | Premium Granite Supplier | Stonehenge Granites">
+<meta name="description" content="Explore Black Pearl Granite for its stunning beauty and durability. Perfect for kitchen countertops, flooring, and more. Available at Stonehenge Granites, India's leading natural stone supplier.">
+<meta name="keywords" content="Black Pearl granite, granite supplier India, natural stone supplier, granite countertops, granite flooring, high-quality granite, granite slabs, durable granite, kitchen granite, granite for home decor, premium granite, construction materials"> 
 
 {% extends 'uifiles/base.html' %}
+{% block title %}Black Pearl Granite | Durable & Elegant Natural Stone by Stonehenge Granites{% endblock title %}
+
 {% load static %}
 {% block content %}
+
     <!--Breadcrumb Banner -->
     <div class="pq-breadcrumb bg-bp">
         <div class="container">
@@ -14,10 +20,10 @@
                         <div class="pq-breadcrumb-container">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="./"><i class="fas fa-home me-2"></i>Home</a>
+                                    <a href="/"><i class="fas fa-home me-2"></i>Home</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="./products">Products</a>
+                                    <a href="/products/">Products</a>
                                 </li>
                                 <li class="breadcrumb-item active">Black Pearl Granite</li>
                             </ol>
@@ -54,7 +60,7 @@
                     <!-- First Image Section with optimized alt text -->
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
-                            <img src="images/products/all-granite-product-collection.webp" alt="Black Pearl Granite Collection - Premium Quality Stones">
+                            <img src="{% static 'images/products/all-granite-product-collection.webp' %}" alt="Black Pearl Granite Collection - Premium Quality Stones">
                         </div>
                         <div class="col-lg-6 col-md-6 mt-4 mt-md-0 pq-px-30">
                             <h4 class="pq-title">Black Pearl Granite Collection</h4>
@@ -140,4 +146,4 @@
     </section>        
     <!-- Services Details -->
 
-    {% endblock %}  
+{% endblock %}  

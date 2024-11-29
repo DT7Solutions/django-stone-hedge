@@ -11,10 +11,10 @@ from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'uifiles/index.html')
+    return render(request, 'uifiles/index.html', {'navbar':'Home'})
 
 def about(request):
-    return render(request, 'uifiles/about.html')
+    return render(request, 'uifiles/about.html', {'navbar':'About'})
 
 @csrf_exempt    
 def contact(request):
@@ -60,23 +60,28 @@ def contact(request):
         # except Exception as e:
         #     return HttpResponse(f"Failed to send email: {str(e)}", status=500)
 
+    return render(request, 'uifiles/contact-us.html', {'navbar':'Contact'})
 
-    return render(request, 'uifiles/contact-us.html')
 def products(request):
-    return render(request, 'uifiles/products.html')
+    return render(request, 'uifiles/products.html', {'navbar':'Products'})
+
+def steelgreylight(request):
+    return render(request, 'uifiles/steelgreylight.html', {'navbar':'Steelgraylight'})
 
 def steelgreydark(request):
-    return render(request, 'uifiles/steelgreydark.html')
-def steelgreylight(request):
-    return render(request, 'uifiles/steelgreylight.html')
-def tanbrown(request):
-    return render(request, 'uifiles/tanbrown.html')
-def maplered(request):
-    return render(request, 'uifiles/maplered.html')
+    return render(request, 'uifiles/steelgreydark.html', {'navbar':'Steelgraydark'})
+
 def blackpearl(request):
-    return render(request, 'uifiles/blackpearl.html')
+    return render(request, 'uifiles/blackpearl.html', {'navbar':'Blackpearl'})
+
+def maplered(request):
+    return render(request, 'uifiles/maplered.html', {'navbar':'Maplered'})
+
+def tanbrown(request):
+    return render(request, 'uifiles/tanbrown.html', {'navbar':'Tanbrown'})
+
 def galaxy(request):
-    return render(request, 'uifiles/Galaxy.html')
+    return render(request, 'uifiles/Galaxy.html', {'navbar':'Galaxy'})
     
 def blogs(request):
     blog = BlogPost.objects.filter().order_by('-Id')
@@ -86,6 +91,7 @@ def blogs(request):
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     return render(request, 'uifiles/blogs.html',{'blog':posts,'posts':posts,'page':page,'navbar':'Blog'})
+
 def Blogdetails(request,slug):
     blog_list = BlogPost.objects.filter().order_by('-Id')[:3]
     selectpost = BlogPost.objects.get(Sluglink=slug)
