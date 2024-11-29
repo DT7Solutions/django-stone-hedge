@@ -15,19 +15,18 @@ def contact(request):
     return render(request, 'uifiles/contact-us.html')
 def products(request):
     return render(request, 'uifiles/products.html')
-def Steelgreylight(request):
-    return render(request, 'uifiles/Steel-grey-light.html')
-def Steelgreydark(request):
-    return render(request, 'uifiles/Steel-grey-dark.html')
-def Steelgreylight(request):
-    return render(request, 'uifiles/Steel-grey-light.html')
-def Tanbrown(request):
-    return render(request, 'uifiles/Tanbrown.html')
-def Maplered(request):
-    return render(request, 'uifiles/Maple-red.html')
-def Blackpearl(request):
-    return render(request, 'uifiles/Black-pearl.html')
-def Galaxy(request):
+
+def steelgreydark(request):
+    return render(request, 'uifiles/steelgreydark.html')
+def steelgreylight(request):
+    return render(request, 'uifiles/steelgreylight.html')
+def tanbrown(request):
+    return render(request, 'uifiles/tanbrown.html')
+def maplered(request):
+    return render(request, 'uifiles/maplered.html')
+def blackpearl(request):
+    return render(request, 'uifiles/blackpearl.html')
+def galaxy(request):
     return render(request, 'uifiles/Galaxy.html')
     
 def blogs(request):
