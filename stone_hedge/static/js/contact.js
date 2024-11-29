@@ -1,23 +1,23 @@
-$(document).ready(function () {
-    $('#submitBtn').click(function (event) {
+jQuery(document).ready(function () {
+    jQuery('#submitBtn').click(function (event) {
         event.preventDefault(); // Prevent the default form submission behavior
        debugger
         // Collect form data
-        let firstName = $('#firstName').val();
-        let lastName = $('#lastName').val();
-        let phone = $('#phone').val();
-        let email = $('#email').val();
-        let service = $('#service').val();
-        let message = $('#message').val();
-        let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]').val();
+        let firstName = jQuery('#firstName').val();
+        let lastName = jQuery('#lastName').val();
+        let phone = jQuery('#phone').val();
+        let email = jQuery('#email').val();
+        let service = jQuery('#service').val();
+        let message = jQuery('#message').val();
+        let csrfmiddlewaretoken = jQuery('input[name=csrfmiddlewaretoken]').val();
 
         // Validate form fields
         if (!firstName || !lastName || !phone || !email || !service || !message) {
-            $('.error-message').show().text("All fields are required.");
+            jQuery('.error-message').show().text("All fields are required.");
             return;
         }
 
-        $('.error-message').hide(); // Hide any previous error messages
+        jQuery('.error-message').hide(); // Hide any previous error messages
 
         // Prepare the data for submission
         let data = new FormData();
@@ -30,10 +30,10 @@ $(document).ready(function () {
         data.append('csrfmiddlewaretoken', csrfmiddlewaretoken);
 
         // Display loading indicator
-        $('.loading').show();
+        jQuery('.loading').show();
 
         // AJAX request to submit the form
-        $.ajax({
+        jQuery.ajax({
             type: 'POST',
             url: '/contact/', // Replace with your backend form submission endpoint
             processData: false,
@@ -41,17 +41,17 @@ $(document).ready(function () {
             cache: false,
             data: data,
             success: function (response) {
-                $('.loading').hide();
+                jQuery('.loading').hide();
                 if (response.success) {
-                    $('#contactForm')[0].reset();
-                    $('.sent-message').show().text("Your message has been sent successfully!");
+                    jQuery('#contactForm')[0].reset();
+                    jQuery('.sent-message').show().text("Your message has been sent successfully!");
                 } else {
-                    $('.error-message').show().text("Form submission failed. Please try again.");
+                    jQuery('.error-message').show().text("Form submission failed. Please try again.");
                 }
             },
             error: function () {
-                $('.loading').hide();
-                $('.error-message').show().text("An error occurred. Please try again later.");
+                jQuery('.loading').hide();
+                jQuery('.error-message').show().text("An error occurred. Please try again later.");
             }
         });
     });

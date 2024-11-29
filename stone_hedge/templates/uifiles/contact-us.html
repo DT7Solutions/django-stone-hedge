@@ -43,13 +43,13 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-6">
                     <div class="pq-section-title pq-style-1">
-                        <h6>Our IT Business:</h6>
-                        <p class="pq-section-description">
+                        <!-- <h6>Our IT Business:</h6>
+                         <p class="pq-section-description">
                             Our IT business, Subhujo Technologies Private Limited, established in 2007, 
                             complements our granite operations. With a presence in India, South Africa, 
                             Nigeria, USA and Dubai, Subhujo Technologies provides a solid foundation for our 
                             diversified business ventures.
-                        </p>
+                        </p> -->
                     </div>
                     <div class="pq-icon-box pq-style-3">
                         <div class="pq-icon">
@@ -130,7 +130,8 @@
                         <h5 class="pq-section-main-title">How Can We Assist You?</h5>
                         <p class="pq-section-description">We’re here to help you find the perfect granite solution. Please fill out the form below, and we’ll get back to you shortly.</p>
                     </div>
-                    <form id="contactForm" action="#" class="pq-contact-form">
+                    <form method="post" id="contactForm">
+                        <!-- {% csrf_token %} -->
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" id="firstName" name="first-name" required placeholder="First Name">
@@ -159,11 +160,14 @@
                                 <textarea id="message" name="your-message" required cols="40" rows="10" placeholder="Write Your Message"></textarea>
                             </div>
                             <div class="col-lg-12">
-                                <button id="submitBtn" type="submit" class="pq-button">
+                                <button type="button" id="submitBtn">
+                                    <span class="pq-button-text me-0">SEND NOW</span>
+                                </button>
+                                <!-- <button id="submitBtn" type="submit" class="pq-button">
                                     <div class="pq-button-block">
                                         <span class="pq-button-text me-0">SEND NOW</span>
                                     </div>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                         <div class="loading" style="display: none;">Loading...</div>

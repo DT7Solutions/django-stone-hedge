@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from .models import BlogPost,Category
+from .models import BlogPost,Category,ContactInquiry
+from django.http import HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.core.paginator import Paginator
+from django.core.mail import send_mail
+from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -11,7 +16,51 @@ def index(request):
 def about(request):
     return render(request, 'uifiles/about.html')
 
+@csrf_exempt    
 def contact(request):
+    if request.method == "POST":
+        first_name = request.POST.get('firstName')  # Correct key
+        last_name = request.POST.get('lastName')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        service = request.POST.get('service')
+        message = request.POST.get('message')
+
+
+        # Save to database or process further
+        ContactInquiry.objects.create(
+            first_name=first_name,
+            last_name=last_name,
+            phone=phone,
+            email=email,
+            service=service,
+            message=message,
+        )
+        
+        # Example of sending an email notification
+        email_subject = f"New Contact Inquiry for {service}"
+        email_body = f"""
+        You have received a new inquiry:
+        
+        Name: {first_name} {last_name}
+        Phone: {phone}
+        Email: {email}
+        Service: {service}
+        Message: {message}
+        """
+        return JsonResponse({'success': True, 'message': 'Successfully submitted your request.'}, status=200)
+        # try:
+        #     send_mail(
+        #         email_subject,
+        #         email_body,
+        #         settings.DEFAULT_FROM_EMAIL,
+        #         [settings.ADMIN_EMAIL],  # Replace with your admin's email
+        #     )
+        #     return HttpResponse("Your inquiry has been submitted successfully.")
+        # except Exception as e:
+        #     return HttpResponse(f"Failed to send email: {str(e)}", status=500)
+
+
     return render(request, 'uifiles/contact-us.html')
 def products(request):
     return render(request, 'uifiles/products.html')
