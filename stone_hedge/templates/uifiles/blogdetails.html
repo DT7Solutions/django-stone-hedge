@@ -81,7 +81,6 @@
                                             <li class="pq-tags-share">
                                                 <a href="#"> {{selectpost.Tags}}</a>
                                             </li>
-                                         
                                         </ul>
                                     </div>                                                                     
                                 </div>
@@ -106,28 +105,32 @@
                                 </div>
                             </div>
                             <div class="pq-single-post-navigation">
-                                <a class="pq-single-post-nav pq-prev" href="./transform-your-space-with-maple-red-granite">
+                                {% if previous_post %} 
+                                <a class="pq-single-post-nav pq-prev" href="/blog/{{previous_post.Sluglink}}/">
                                     <div class="pq-single-post-nav-image-holder">
-                                        <img src="{% static 'images/blog/transform-your-space-with-maple-red-granite.webp' %}" class="pq-single-post-nav-image wp-post-image" alt="post-img">
+                                        <img src="/media/{{previous_post.Image1}}" class="pq-single-post-nav-image wp-post-image" alt="post-img">
                                     </div>
                                     <div class="pq-single-post-nav-content">
                                         <span class="pq-single-post-nav-label">Prev post</span>
                                         <div class="pq-single-post-nav-title">
-                                            <h4>Transform Your Space with Maple Red Granite</h4>
+                                            <h4>{{previous_post.Title}}</h4>
                                         </div>
                                     </div>
                                 </a>
-                                <a class="pq-single-post-nav pq-next" href="./galaxy-granite-an-overview">
+                                {% endif %}
+                                {% if next_post %} 
+                                <a class="pq-single-post-nav pq-next" href="/blog/{{next_post.Sluglink}}/">
                                     <div class="pq-single-post-nav-content">
                                         <span class="pq-single-post-nav-label">Next post</span>
                                         <div class="pq-single-post-nav-title">
-                                            <h4>Galaxy Granite: An Overview</h4>
+                                            <h4>{{next_post.Title}}</h4>
                                         </div>
                                     </div>
                                     <div class="pq-single-post-nav-image-holder">
-                                        <img src="{% static 'images/blog/galaxy-granite-an-overview.webp' %}" class="pq-single-post-nav-image wp-post-image" alt="post-img">
+                                        <img src="/media/{{next_post.Image1}}" class="pq-single-post-nav-image wp-post-image" alt="post-img">
                                     </div>
                                 </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
