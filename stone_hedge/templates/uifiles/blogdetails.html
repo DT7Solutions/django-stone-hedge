@@ -3,6 +3,12 @@
 {% load static %}
 {% block content %}
 
+{% block title %}{{ meta_title }}{% endblock %}
+<meta name="title" content="{{ meta_title }}">
+<meta name="description" content="{{ meta_description }}">
+<meta name="keywords" content="{{meta_tags}}">
+
+    {% if selectpost %}
     <!--Breadcrumb Banner -->
     <div class="pq-breadcrumb bg-blog-details">
         <div class="container">
@@ -10,7 +16,7 @@
                 <div class="col-lg-12">
                     <nav aria-label="breadcrumb">
                         <div class="pq-breadcrumb-title">
-                            <h1>The Versatility of Tan Brown Granite</h1>
+                            <h1>{{selectpost.Title}}</h1>
                         </div>
                         <div class="pq-breadcrumb-container">
                             <ol class="breadcrumb">
@@ -20,7 +26,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="/blogs/">Blogs</a>
                                 </li>
-                                <li class="breadcrumb-item active">The Versatility of Tan Brown Granite</li>
+                                <li class="breadcrumb-item active">{{selectpost.Title}}</li>
                             </ol>
                         </div>
                     </nav>
@@ -34,13 +40,12 @@
     <section class="blog-single">
         <div class="container">
             <div class="row justify-content-center">
-                {% if selectpost %}
                 <div class="col-lg-10">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="pq-blog-post">
                                 <div class="pq-post-media">
-                                    <img decoding="async" src="/media/{{selectpost.Image1}}" alt="Tan Brown blog-image">
+                                    <img decoding="async" src="/media/{{selectpost.Image1}}" alt="blog-image">
                                     <div class="pq-post-category">
                                         <a href="/blog/{{blogitem.Sluglink}}/">{{selectpost.Stonename}}</a>
                                     </div>
@@ -63,7 +68,7 @@
                                     
                                     <blockquote class="pq-mb-30">
                                         <p>{{selectpost.quotationcontent}}</p>
-                                        <p><strong>– Admin, Stonehenge Granites</strong></p>
+                                        <p><strong>– {{selectpost.CreatedName}}</strong></p>
                                     </blockquote>
                                   
                                 </div> 
@@ -127,10 +132,10 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
             </div>
         </div>
     </section>
     <!-- Blogs Details -->
+    {% endif %}
 
 {% endblock %}  
