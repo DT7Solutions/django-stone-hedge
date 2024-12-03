@@ -16,4 +16,4 @@ urlpatterns = [
     path('black-pearl/',blackpearl,name='black-pearl'),
     path('maple-red/',maplered,name='maple-red'),
     path('galaxy/',galaxy,name="galaxy"),
-]
+]   

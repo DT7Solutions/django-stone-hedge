@@ -54,6 +54,6 @@ class ContactInquiry(models.Model):
     
     class Meta:
         ordering = ['id']
-
+    
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.service}"
+            return self.first_name

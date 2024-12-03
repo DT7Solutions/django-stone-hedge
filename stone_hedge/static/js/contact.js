@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
-    jQuery('#submitBtn').click(function (event) {
-        event.preventDefault(); // Prevent the default form submission behavior
-       debugger
+    jQuery('#contactBtn').click(function (event) {
+        event.preventDefault(); 
+
         // Collect form data
         let firstName = jQuery('#firstName').val();
         let lastName = jQuery('#lastName').val();
@@ -34,12 +34,11 @@ jQuery(document).ready(function () {
 
         // AJAX request to submit the form
         jQuery.ajax({
+            url: '/contact/', 
             type: 'POST',
-            url: '/contact/', // Replace with your backend form submission endpoint
+            data: data,
             processData: false,
             contentType: false,
-            cache: false,
-            data: data,
             success: function (response) {
                 jQuery('.loading').hide();
                 if (response.success) {

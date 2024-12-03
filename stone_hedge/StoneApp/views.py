@@ -19,47 +19,27 @@ def about(request):
 @csrf_exempt    
 def contact(request):
     if request.method == "POST":
-        first_name = request.POST.get('firstName')  # Correct key
-        last_name = request.POST.get('lastName')
-        phone = request.POST.get('phone')
-        email = request.POST.get('email')
-        service = request.POST.get('service')
-        message = request.POST.get('message')
+        try:
+            first_name = request.POST.get('firstName')
+            last_name = request.POST.get('lastName')
+            phone = request.POST.get('phone')
+            email = request.POST.get('email')
+            service = request.POST.get('service')
+            message = request.POST.get('message')
 
+            # Save to the database
+            ContactInquiry.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                phone=phone,
+                email=email,
+                service=service,
+                message=message,
+            )
 
-        # Save to database or process further
-        ContactInquiry.objects.create(
-            first_name=first_name,
-            last_name=last_name,
-            phone=phone,
-            email=email,
-            service=service,
-            message=message,
-        )
-        
-        # Example of sending an email notification
-        email_subject = f"New Contact Inquiry for {service}"
-        email_body = f"""
-        You have received a new inquiry:
-        
-        Name: {first_name} {last_name}
-        Phone: {phone}
-        Email: {email}
-        Service: {service}
-        Message: {message}
-        """
-        return JsonResponse({'success': True, 'message': 'Successfully submitted your request.'}, status=200)
-        # try:
-        #     send_mail(
-        #         email_subject,
-        #         email_body,
-        #         settings.DEFAULT_FROM_EMAIL,
-        #         [settings.ADMIN_EMAIL],  # Replace with your admin's email
-        #     )
-        #     return HttpResponse("Your inquiry has been submitted successfully.")
-        # except Exception as e:
-        #     return HttpResponse(f"Failed to send email: {str(e)}", status=500)
-
+            return JsonResponse({'success': True, 'message': 'Successfully submitted your request.'}, status=200)
+        except Exception as e:
+            return JsonResponse({'success': False, 'message': f'Error: {str(e)}'}, status=500)
     return render(request, 'uifiles/contact-us.html', {'navbar':'Contact'})
 
 def products(request):
@@ -130,3 +110,4 @@ def Blogdetails(request,slug):
     print(selectpost.MetaKeywords)
 
     return render(request, 'uifiles/blogdetails.html',context)  
+
