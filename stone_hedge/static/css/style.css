@@ -7032,7 +7032,11 @@ Custom Css
 }
 
 .pq-testimonial-slider-padding {
-	padding: 150px 90px 125px 15px;
+	padding: 90px 90px 75px 15px;
+}
+
+.pq-form-position img {
+	border-radius: 12px;
 }
 
 .pq-form-box {
