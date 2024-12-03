@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-hi1*mg8hr(p@6-%dt-pqa7h1s_9g61621xkzwo(zs9)txajs%y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['147.79.67.48']
+ALLOWED_HOSTS = ['147.79.67.48','stonehengegranites.com','www.stonehengegranites.com']
 
 
 # Application definition
