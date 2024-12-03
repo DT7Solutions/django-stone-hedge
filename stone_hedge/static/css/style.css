@@ -7129,3 +7129,11 @@ Custom Css
 .pq-service-box .pq-service-img{
 	padding-top: 10% !important;
 }
+
+.ion-ios-arrow-up::before{
+ padding-top: 10px !important;
+}
+
+.ion-close-round:before {
+    padding-top: 20px !important;
+}
