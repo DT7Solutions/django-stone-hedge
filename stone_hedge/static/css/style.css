@@ -692,6 +692,15 @@ Blog
 	margin-bottom: 0;
 }
 
+.blog .pq-blog-post {
+	background-color: var(--grey-color);
+}
+
+.blog .pq-blog-post .pq-blog-contain {
+	min-height: 300px;
+	padding: 2.5%;
+}
+
 .pq-blog-post {
 	margin-bottom: 45px;
 	display: inline-block;
@@ -7140,4 +7149,8 @@ Custom Css
 
 .ion-close-round:before {
     padding-top: 20px !important;
+}
+
+.pq-sidebar-social ul li i {
+    padding-top: 15px !important;
 }

@@ -11,7 +11,13 @@ from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'uifiles/index.html', {'navbar':'Home'})
+    blog = BlogPost.objects.filter().order_by('-Id')
+    
+    # allposts = BlogPost.objects.all()
+    paginator = Paginator(blog, 9) 
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+    return render(request, 'uifiles/index.html',{'blog':posts,'posts':posts,'page':page,'navbar':'Home'})
 
 def about(request):
     return render(request, 'uifiles/about.html', {'navbar':'About'})
@@ -61,7 +67,7 @@ def tanbrown(request):
     return render(request, 'uifiles/tanbrown.html', {'navbar':'Tanbrown'})
 
 def galaxy(request):
-    return render(request, 'uifiles/Galaxy.html', {'navbar':'Galaxy'})
+    return render(request, 'uifiles/galaxy.html', {'navbar':'Galaxy'})
     
 def blogs(request):
     blog = BlogPost.objects.filter().order_by('-Id')
