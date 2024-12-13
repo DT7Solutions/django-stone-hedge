@@ -22,6 +22,9 @@ def index(request):
 def about(request):
     return render(request, 'uifiles/about.html', {'navbar':'About'})
 
+def gallery(request):
+    return render(request, 'uifiles/gallery.html', {'navbar':'Gallery'})
+
 @csrf_exempt    
 def contact(request):
     if request.method == "POST":

@@ -1466,5 +1466,6 @@ Design and Developed by: Peacefulqode
 	
 	header#pq-header .pq-bottom-header .navbar .navbar-nav li:hover>.sub-menu {
 		display: block !important;
+		top: 125%;
 	}
 }

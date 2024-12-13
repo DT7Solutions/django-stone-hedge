@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index,about,contact,blogs,Blogdetails,products,steelgreylight,steelgreydark,maplered,blackpearl,tanbrown,galaxy
+from .views import index,about,contact,gallery,blogs,Blogdetails,products,steelgreylight,steelgreydark,maplered,blackpearl,tanbrown,galaxy
 
 
 
@@ -8,6 +8,7 @@ urlpatterns = [
     path('about/',about,name='about'),
     path('products/', products , name='products'),
     path('contact/',contact,name='contact'),
+    path('gallery/',gallery,name='gallery'),
     path('blogs/',blogs,name='blogs'),
     path('blog/<str:slug>/', Blogdetails , name='blog'),
     path('steel-grey-light/',steelgreylight,name='steel-grey-light'),
