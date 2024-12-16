@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BlogPost,Category,ContactInquiry
+from .models import BlogPost,Category,ContactInquiry,Gallerycategory, GalleryImage
 
 
 class AdminBlogpost(admin.ModelAdmin):
@@ -20,7 +20,13 @@ class ContactInquiryAdmin(admin.ModelAdmin):
     search_fields = ('first_name', 'last_name', 'email', 'service')
     list_filter = ('service', 'submitted_at')
 
+class AdminGalleryCategory(admin.ModelAdmin):
+    list_display = ('id','Name')
 
+class AdminGallery(admin.ModelAdmin):
+    list_display = ('id','category', 'image')
 
 admin.site.register(Category,AdminCategories)    
 admin.site.register(ContactInquiry,ContactInquiryAdmin)    
+admin.site.register(Gallerycategory,AdminGalleryCategory)
+admin.site.register(GalleryImage,AdminGallery)

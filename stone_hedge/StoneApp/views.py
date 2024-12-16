@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost,Category,ContactInquiry
+from .models import BlogPost,Category,ContactInquiry,GalleryImage, Gallerycategory
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -23,7 +23,9 @@ def about(request):
     return render(request, 'uifiles/about.html', {'navbar':'About'})
 
 def gallery(request):
-    return render(request, 'uifiles/gallery.html', {'navbar':'Gallery'})
+    gallery_categories = Gallerycategory.objects.all().order_by('id')
+    gallery_items = GalleryImage.objects.all().order_by('id')
+    return render(request, 'uifiles/gallery.html', {'navbar':'Gallery',"gallery":gallery_items, "gallery_cat":gallery_categories})
 
 @csrf_exempt    
 def contact(request):

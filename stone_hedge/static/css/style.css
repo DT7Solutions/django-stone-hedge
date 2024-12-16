@@ -7157,6 +7157,13 @@ Custom Css
 
 
 /* Gallery View Section */
+.gallery-view .gallery-name {
+	font-size: 16px !important;
+	font-weight: 600;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+
 .pq-gallery-block {
 	position: relative;
 	overflow: hidden;

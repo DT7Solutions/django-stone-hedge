@@ -56,7 +56,25 @@
                     <div class="divider pq-left-border pq-45"></div>
                 </div>
 
-                <div class="row justify-content-center text-center">
+                <div class="gallery-view">
+                    <div class="row justify-content-center d-flex">
+                        {% for category in gallery_cat %}
+                        <div class="col-md-4 mb-3">
+                            <a data-fslightbox="gallery {{ category.Name }}" data-type="image" href="{{ category.image.url }}" title="{{ category.Name }}">
+                                <img src="{{ category.image.url }}" class="img-fluid rounded" alt="{{ category.Name }}">
+                            </a>
+                            <h4 class="gallery-name text-center my-2">{{ category.Name }}</h4>
+                            {% for item in gallery %}
+                                {% if item.category.Name == category.Name %}
+                                <a data-fslightbox="gallery {{ category.Name }}" data-type="image" href="{{ item.image.url }}" title="{{ item.id }}" class="d-none"></a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center text-center d-none">
                     <a data-fslightbox="gallery-view_1" data-type="image" href="{% static 'images/service/steel-grey-light.webp' %}" title="images" class="col-md-4 my-2">
                       <img src="{% static 'images/service/steel-grey-light.webp' %}" class="img-fluid" alt="images">
                       <h6 class="my-2">Steel Grey Light Granite</h6>

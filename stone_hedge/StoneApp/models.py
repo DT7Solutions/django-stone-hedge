@@ -57,3 +57,21 @@ class ContactInquiry(models.Model):
     
     def __str__(self):
             return self.first_name
+    
+
+
+class  Gallerycategory(models.Model):
+    Name = models.CharField(max_length=50, default="heading")
+    image = models.ImageField(upload_to='gallery-cat/',default="")
+    def __str__(self):
+        return self.Name
+
+    class Meta:
+        verbose_name = 'Galleycategory'
+        verbose_name_plural = 'Gallery Categories'
+
+class GalleryImage(models.Model):
+    category = models.ForeignKey(Gallerycategory,on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to='gallery/')
+    def __str__(self):
+         return f"Image in Category: {self.category.Name}"
