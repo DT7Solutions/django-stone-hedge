@@ -5087,6 +5087,10 @@ Portfolio
 	letter-spacing: 1px;
 }
 
+.pq-portfoliobox-3 .pq-portfolio-info h5 {
+	font-size: 22px;
+	line-height: 26px;
+}
 
 .pq-portfoliobox-3 .pq-portfolio-info {
 	margin: auto;
@@ -5124,9 +5128,9 @@ Portfolio
 	overflow: hidden;
 }
 
-.pq-grid .pq-grid-item:nth-child(1){
+/* .pq-grid .pq-grid-item:nth-child(1){
 	margin-top: 60px;
-}
+} */
 
 .pq-grid .pq-col-6 {
 	padding: 0 30px 45px;
