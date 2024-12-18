@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost,Category,ContactInquiry
+from .models import BlogPost,Category,ContactInquiry,GalleryImage, Gallerycategory
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -11,10 +11,21 @@ from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'uifiles/index.html', {'navbar':'Home'})
+    blog = BlogPost.objects.filter().order_by('-Id')
+    
+    # allposts = BlogPost.objects.all()
+    paginator = Paginator(blog, 9) 
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+    return render(request, 'uifiles/index.html',{'blog':posts,'posts':posts,'page':page,'navbar':'Home'})
 
 def about(request):
     return render(request, 'uifiles/about.html', {'navbar':'About'})
+
+def gallery(request):
+    gallery_categories = Gallerycategory.objects.all().order_by('id')
+    gallery_items = GalleryImage.objects.all().order_by('id')
+    return render(request, 'uifiles/gallery.html', {'navbar':'Gallery',"gallery":gallery_items, "gallery_cat":gallery_categories})
 
 @csrf_exempt    
 def contact(request):
@@ -61,10 +72,10 @@ def tanbrown(request):
     return render(request, 'uifiles/tanbrown.html', {'navbar':'Tanbrown'})
 
 def galaxy(request):
-    return render(request, 'uifiles/Galaxy.html', {'navbar':'Galaxy'})
+    return render(request, 'uifiles/galaxy.html', {'navbar':'Galaxy'})
     
 def blogs(request):
-    blog = BlogPost.objects.filter().order_by('-Id')
+    blog = BlogPost.objects.filter(status=1).order_by('-Id')
     
     # allposts = BlogPost.objects.all()
     paginator = Paginator(blog, 9) 

@@ -1,0 +1,121 @@
+<meta name="title" content="Stonehenge Granites Gallery | Explore Premium Granite and Natural Stones">
+<meta name="description" content="Explore the extensive gallery of Stonehenge Granites showcasing a wide variety of premium granite and natural stones. Find inspiration for your projects with high-quality granite solutions for interiors, exteriors, countertops, flooring, and more.">
+<meta name="keywords" content="Stonehenge Granites, granite gallery, premium granite products, natural stone collection, granite supplier india, steel grey granite, tan brown granite, black pearl granite, granite slabs, granite tiles, granite flooring, countertop granite, Indian granite supplier, durable granite solutions, high-quality granite, affordable granite india, natural stone supplier, granite for interiors and exteriors, project granite inspiration">
+
+{% extends 'uifiles/base.html' %}
+{% block title %}Stonehenge Granites Gallery | Explore Our Wide Range of Premium Granite & Natural Stones{% endblock title %}
+
+{% load static %}
+{% block content %}
+    <!--Breadcrumb Banner -->
+    <div class="pq-breadcrumb bg-gallery">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb">
+                        <div class="pq-breadcrumb-title">
+                            <h1>Gallery</h1>
+                        </div>
+                        <div class="pq-breadcrumb-container">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="/"><i class="fas fa-home me-2"></i>Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                            </ol>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- Breadcrumb Banner -->
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-8">
+                    <div class="pq-section-title pq-style-1">
+                        <span class="pq-section-sub-title">latest work</span>
+                        <h5 class="pq-section-main-title">discover our creation</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="button-align">
+                        <a class="pq-button pq-button-flat" href="./contact-us.html">
+                            <div class="pq-button-block">
+                                <span class="pq-button-text">Contact Us</span>
+                                <span class="pq-button-line-right"></span>
+                                <i class="ion ion-ios-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="divider pq-left-border pq-45"></div>
+                </div>
+
+                <div class="gallery-view">
+                    <div class="row justify-content-center d-flex">
+                        {% for category in gallery_cat %}
+                        <div class="col-md-4 mb-3">
+                            <a data-fslightbox="gallery {{ category.Name }}" data-type="image" href="{{ category.image.url }}" title="{{ category.Name }}">
+                                <img src="{{ category.image.url }}" class="img-fluid rounded" alt="{{ category.Name }}">
+                            </a>
+                            <h4 class="gallery-name text-center my-2">{{ category.Name }}</h4>
+                            {% for item in gallery %}
+                                {% if item.category.Name == category.Name %}
+                                <a data-fslightbox="gallery {{ category.Name }}" data-type="image" href="{{ item.image.url }}" title="{{ item.id }}" class="d-none"></a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center text-center d-none">
+                    <a data-fslightbox="gallery-view_1" data-type="image" href="{% static 'images/service/steel-grey-light.webp' %}" title="images" class="col-md-4 my-2">
+                      <img src="{% static 'images/service/steel-grey-light.webp' %}" class="img-fluid" alt="images">
+                      <h6 class="my-2">Steel Grey Light Granite</h6>
+                    </a>
+                    <a data-fslightbox="gallery-view_2" data-type="image" href="{% static 'images/service/steel-grey-dark.webp' %}" title="images" class="col-md-4 my-2">
+                      <img src="{% static 'images/service/steel-grey-dark.webp' %}" class="img-fluid" alt="images">
+                      <h6 class="my-2">Steel Grey Dark Granite</h6>
+                    </a>
+                    <a data-fslightbox="gallery-view_3" data-type="image" href="{% static 'images/service/black-peral.webp' %}" title="images" class="col-md-4 my-2">
+                      <img src="{% static 'images/service/black-peral.webp' %}" class="img-fluid" alt="images">
+                      <h6 class="my-2">Black Pearl Granite</h6>
+                    </a>
+                    <a data-fslightbox="gallery-view_4" data-type="image" href="{% static 'images/service/maple-red.webp' %}" title="images" class="col-md-4 my-2">
+                        <img src="{% static 'images/service/maple-red.webp' %}" class="img-fluid" alt="images">
+                        <h6 class="my-2">Maple Red Granite</h6>
+                    </a>
+                    <a data-fslightbox="gallery-view_5" data-type="image" href="{% static 'images/service/tan-brown.webp' %}" title="images" class="col-md-4 my-2">
+                        <img src="{% static 'images/service/tan-brown.webp' %}" class="img-fluid" alt="images">
+                        <h6 class="my-2">Tan Brown Granite</h6>
+                    </a>
+                    <a data-fslightbox="gallery-view_6" data-type="image" href="{% static 'images/service/black-galaxy.webp' %}" title="images" class="col-md-4 my-2">
+                        <img src="{% static 'images/service/black-galaxy.webp' %}" class="img-fluid" alt="images">
+                        <h6 class="my-2">Black Galaxy Granite</h6>
+                    </a>
+                    <a data-fslightbox="gallery-view_1" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-1-1" title="images"></a>
+                    <a data-fslightbox="gallery-view_2" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-2-1" title="images"></a>
+                    <a data-fslightbox="gallery-view_3" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-3-1" title="images"></a>
+                    <a data-fslightbox="gallery-view_4" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-4-1" title="images"></a>
+                    <a data-fslightbox="gallery-view_5" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-5-1" title="images"></a>
+                    <a data-fslightbox="gallery-view_6" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-6-1" title="images"></a>
+
+                    <a data-fslightbox="gallery-view_1" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-1-2" title="images"></a>
+                    <a data-fslightbox="gallery-view_2" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-2-2" title="images"></a>
+                    <a data-fslightbox="gallery-view_3" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-3-2" title="images"></a>
+                    <a data-fslightbox="gallery-view_4" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-42" title="images"></a>
+                    <a data-fslightbox="gallery-view_5" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-5-2" title="images"></a>
+                    <a data-fslightbox="gallery-view_6" data-type="image" href="https://via.placeholder.com/800x1000.png?text=Image-6-2" title="images"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery -->
+    
+    {% endblock %}  

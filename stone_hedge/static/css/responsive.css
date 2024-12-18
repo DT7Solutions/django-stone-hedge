@@ -492,7 +492,7 @@ Design and Developed by: Peacefulqode
 		-webkit-box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
 		-moz-box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
 		box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
-		max-height: 330px;
+		max-height: 650px;
 		overflow-y: scroll;
 		overflow-x: hidden;
 	}
@@ -1466,5 +1466,6 @@ Design and Developed by: Peacefulqode
 	
 	header#pq-header .pq-bottom-header .navbar .navbar-nav li:hover>.sub-menu {
 		display: block !important;
+		top: 125%;
 	}
 }

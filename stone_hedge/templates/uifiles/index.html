@@ -174,7 +174,7 @@
                         <img src="{% static 'images/about-us/about-black-galexy-2.png' %}" class="pq-image4 wow animated zoomIn" alt="Close-up of Black Galaxy Granite - High Quality">
                     </div>
                 </div>
-                <div class="col-xl-6 mt-4 mt-xl-0 ps-xl-6 wow animated fadeInRight">
+                <div class="col-xl-6 mt-5 mt-xl-0 ps-xl-6 wow animated fadeInRight">
                     <div class="pq-section-title pq-style-1">
                         <span class="pq-section-sub-title">Stonehenge Granites</span>
                         <h5 class="pq-section-main-title">Quality Granite for a Solid Future</h5>
@@ -185,25 +185,30 @@
                             vision is to become a global leader in the granite industry through excellence and innovation.
                         </p>
                         <ul class="pq-list-check pq-mb-45">
-                            <strong>Products and Services:</strong>
+                            <strong>Our Granite Products and Services:</strong>
                             <li>
                                 <i class="fas fa-circle"></i>
                                 <span>
                                     <strong>Granite Blocks: </strong>
-                                    Sourced from our quarries, available in Tan Brown and Maple Red.
+                                    High-quality blocks sourced directly from our quarries, available in popular colours like Tan Brown and Maple Red.
                                 </span>
                             </li>
                             <li>
                                 <i class="fas fa-circle"></i>
-                                <span> 
-                                    <strong>Granite Slabs: </strong>Available in polished, flamed, and Lapathro finishes. 
-                                    We offer a range of colours including Tan Brown, Maple Red, Steel Grey, Black Pearl, and 
-                                    Jet Black. If you need different colours, we can source, process, and supply them to 
-                                    meet your requirements.
+                                <span>
+                                    <strong>Granite Slabs: </strong>
+                                    Offered in polished, flamed, and Lapathro finishes to suit various needs.
                                 </span>
                             </li>
-                        </ul>
-                    </div>
+                            <li>
+                                <i class="fas fa-circle"></i>
+                                <span>
+                                    <strong>Wide Colour Range: </strong>
+                                    Available in shades such as Tan Brown, Maple Red, Steel Grey, Black Pearl, and Jet Black.
+                                </span>
+                            </li>
+                        </ul>                        
+                    </div>                    
                     <a class="pq-button pq-button-flat" href="/about/">
                         <div class="pq-button-block">
                             <span class="pq-button-text">read more</span>
@@ -563,7 +568,7 @@
     <!-- Skill -->
 
     <!-- Testimonial -->
-    <section class="form pq-bg-dark pq-bg-img-2 p-0 pb-5">
+    <section class="form pq-bg-dark pq-bg-img-2 p-0">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 wow animated fadeInLeft pq-testimonial-slider-padding">
@@ -660,54 +665,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow animated fadeInRight pq-form-position">
-                    <div class="pq-form-box">        
-                        <div class="pq-section-title pq-style-1 pq-mb-0">
-                            <span class="pq-section-sub-title">Visit Us</span>
-                            <h5 class="pq-section-main-title">Get Your Quote</h5>
-                            <p class="pq-section-description">Complete the form to schedule your visit and explore our offerings.</p>
-                        </div>
-                        <form action="#" class="pq-contact-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" name="first-name" placeholder="First Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" name="last-name" placeholder="Last Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="tel" name="phone" placeholder="Enter Your Phone">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" name="email" placeholder="Enter Your Email">
-                                </div>
-                                <div class="col-lg-12">
-                                    <select>
-                                        <option value="" disabled selected>Choose Your Service</option>
-                                        <option value="steel-grey-light">Steel Grey Light</option>
-                                        <option value="steel-grey-dark">Steel Grey Dark</option>
-                                        <option value="black-pearl">Black Pearl</option>
-                                        <option value="maple-red">Maple Red</option>
-                                        <option value="tan-brown">Tan Brown</option>
-                                        <option value="galaxy">Galaxy</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-12">
-                                    <textarea name="your-message" cols="40" rows="10" placeholder="Write Your Message"></textarea>
-                                </div>
-                                <div class="col-lg-12">
-                                    <button type="submit" class="pq-button">
-                                        <div class="pq-button-block">
-                                            <span class="pq-button-text me-0">SUBMIT REQUEST</span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="loading" style="display: none;">Loading...</div>
-                            <div class="error-message" style="display: none; color: red;"></div>
-                            <div class="sent-message" style="display: none; color: green;">Your message has been sent successfully!</div>
-                        </form>
-                        
-                    </div>
+                    <img src="{% static 'images/testimonial/What-Our-Clients-Say.png' %}" alt="all Types of Granites Collections">
                 </div>
             </div>
         </div>
@@ -744,37 +702,37 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 wow animated fadeInUp">
+
                     <div class="pq-blog">
                         <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="false"
                             data-desk_num="3" data-lap_num="1" data-tab_num="2" data-mob_num="1" data-mob_sm="1"
                             data-autoplay="true" data-loop="true" data-margin="30">
+
+                            {% for blogitem in blog %} 
                             <div class="item">
                                 <div class="pq-blog-post">
                                     <div class="pq-post-media">
-                                        <img decoding="async" src="{% static 'images/blog/why-choose-steel-grey-light-granite-for-your-home.webp' %}" alt="Steel Grey Light Granite Blogs">
+                                        <img decoding="async" src="/media/{{blogitem.Image1}}" alt="Granite Blogs Image">
                                         <div class="pq-post-category">
-                                            <a href="./why-choose-steel-grey-light-granite-for-your-home">Steel Grey Light</a>
+                                            <a href="/blog/{{blogitem.Sluglink}}/">{{blogitem.Stonename}}</a>
                                         </div>
                                     </div>
                                     <div class="pq-blog-contain">
                                         <div class="pq-post-meta">
                                             <ul>
                                                 <li class="pq-post-meta">
-                                                    <a href="./why-choose-steel-grey-light-granite-for-your-home">September 3, 2024</a>
-                                                </li>
-                                                <li class="pq-post-comment">
-                                                    <a href="./why-choose-steel-grey-light-granite-for-your-home">5 Comments</a>
+                                                    <a href="/blog/{{blogitem.Sluglink}}/">{{blogitem.Create_at}}</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <h5 class="pq-blog-title">
-                                            <a href="./why-choose-steel-grey-light-granite-for-your-home">
-                                                Why Choose Steel Grey Light Granite for Your Home?
+                                            <a href="/blog/{{blogitem.Sluglink}}/">
+                                                {{blogitem.Title}}
                                             </a>
                                         </h5>
                                         <p>Discover the unique features and benefits of Steel Grey Light granite, a top choice for modern homes.</p>
                                         <div class="pq-btn-container">
-                                            <a href="./why-choose-steel-grey-light-granite-for-your-home"
+                                            <a href="/blog/{{blogitem.Sluglink}}/"
                                                 class="pq-button pq-button-link">
                                                 <div class="pq-button-block">
                                                     <div class="pq-svg">
@@ -804,286 +762,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="pq-blog-post">
-                                    <div class="pq-post-media">
-                                        <img decoding="async" src="{% static 'images/blog/exploring-the-elegance-of-steel-grey-dark-granite.webp' %}" alt="Steel Grey Dark Granite Blogs">
-                                        <div class="pq-post-category">
-                                            <a href="./exploring-the-elegance-of-steel-grey-dark-granite">Steel Grey Dark</a>
-                                        </div>
-                                    </div>
-                                    <div class="pq-blog-contain">
-                                        <div class="pq-post-meta">
-                                            <ul>
-                                                <li class="pq-post-meta">
-                                                    <a href="./exploring-the-elegance-of-steel-grey-dark-granite">March 16, 2024</a>
-                                                </li>
-                                                <li class="pq-post-comment">
-                                                    <a href="./exploring-the-elegance-of-steel-grey-dark-granite">7 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="pq-blog-title">
-                                            <a href="./exploring-the-elegance-of-steel-grey-dark-granite">
-                                                Exploring the Elegance of Steel Grey Dark Granite
-                                            </a>
-                                        </h5>
-                                        <p>Learn how Steel Grey Dark granite can enhance your interior and exterior spaces with its rich tones.</p>
-                                        <div class="pq-btn-container">
-                                            <a href="./exploring-the-elegance-of-steel-grey-dark-granite"
-                                                class="pq-button pq-button-link">
-                                                <div class="pq-button-block">
-                                                    <div class="pq-svg">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64.356"
-                                                            height="36.52" viewBox="0 0 64.356 36.52">
-                                                            <g transform="translate(-6.444 -1.74)">
-                                                                <g data-name="Group 2">
-                                                                    <circle data-name="Ellipse 2" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1"
-                                                                        opacity="0.5"></circle>
-                                                                    <circle data-name="Ellipse 3" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1">
-                                                                    </circle>
-                                                                </g>
-                                                                <path data-name="Path 1"
-                                                                    d="M49.525,14.265l-.627.779,5.583,4.5H6.444v1h48.02L48.9,24.954l.621.783L56.7,20.044Z"
-                                                                    fill="#30373f"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <span class="pq-button-text">read more </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-blog-post">
-                                    <div class="pq-post-media">
-                                        <img decoding="async" src="{% static 'images/blog/black-pearl-granite-the-ultimate-guide.webp' %}" alt="Black Pearl Granite Blogs">
-                                        <div class="pq-post-category">
-                                            <a href="./black-pearl-granite-the-ultimate-guide">Black Pearl</a>
-                                        </div>
-                                    </div>
-                                    <div class="pq-blog-contain">
-                                        <div class="pq-post-meta">
-                                            <ul>
-                                                <li class="pq-post-meta">
-                                                    <a href="./black-pearl-granite-the-ultimate-guide">April 20, 2024</a>
-                                                </li>
-                                                <li class="pq-post-comment">
-                                                    <a href="./black-pearl-granite-the-ultimate-guide">4 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="pq-blog-title">
-                                            <a href="./black-pearl-granite-the-ultimate-guide">
-                                                Black Pearl Granite: The Ultimate Guide
-                                            </a>
-                                        </h5>
-                                        <p>Find out why Black Pearl granite is a timeless choice for countertops and flooring.</p>
-                                        <div class="pq-btn-container">
-                                            <a href="./black-pearl-granite-the-ultimate-guide"
-                                                class="pq-button pq-button-link">
-                                                <div class="pq-button-block">
-                                                    <div class="pq-svg">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64.356"
-                                                            height="36.52" viewBox="0 0 64.356 36.52">
-                                                            <g transform="translate(-6.444 -1.74)">
-                                                                <g data-name="Group 2">
-                                                                    <circle data-name="Ellipse 2" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1"
-                                                                        opacity="0.5"></circle>
-                                                                    <circle data-name="Ellipse 3" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1">
-                                                                    </circle>
-                                                                </g>
-                                                                <path data-name="Path 1"
-                                                                    d="M49.525,14.265l-.627.779,5.583,4.5H6.444v1h48.02L48.9,24.954l.621.783L56.7,20.044Z"
-                                                                    fill="#30373f"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <span class="pq-button-text">read more </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-blog-post">
-                                    <div class="pq-post-media">
-                                        <img decoding="async" src="{% static 'images/blog/transform-your-space-with-maple-red-granite.webp' %}" alt="Maple Red Granite Blogs">
-                                        <div class="pq-post-category">
-                                            <a href="./transform-your-space-with-maple-red-granite">Maple Red</a>
-                                        </div>
-                                    </div>
-                                    <div class="pq-blog-contain">
-                                        <div class="pq-post-meta">
-                                            <ul>
-                                                <li class="pq-post-meta">
-                                                    <a href="./transform-your-space-with-maple-red-granite">February 10, 2024</a>
-                                                </li>
-                                                <li class="pq-post-comment">
-                                                    <a href="./transform-your-space-with-maple-red-granite">6 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="pq-blog-title">
-                                            <a href="./transform-your-space-with-maple-red-granite">
-                                                Transform Your Space with Maple Red Granite
-                                            </a>
-                                        </h5>
-                                        <p>Explore the striking beauty of Maple Red granite and how it can elevate your home decor.</p>
-                                        <div class="pq-btn-container">
-                                            <a href="./transform-your-space-with-maple-red-granite"
-                                                class="pq-button pq-button-link">
-                                                <div class="pq-button-block">
-                                                    <div class="pq-svg">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64.356"
-                                                            height="36.52" viewBox="0 0 64.356 36.52">
-                                                            <g transform="translate(-6.444 -1.74)">
-                                                                <g data-name="Group 2">
-                                                                    <circle data-name="Ellipse 2" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1"
-                                                                        opacity="0.5"></circle>
-                                                                    <circle data-name="Ellipse 3" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1">
-                                                                    </circle>
-                                                                </g>
-                                                                <path data-name="Path 1"
-                                                                    d="M49.525,14.265l-.627.779,5.583,4.5H6.444v1h48.02L48.9,24.954l.621.783L56.7,20.044Z"
-                                                                    fill="#30373f"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <span class="pq-button-text">read more </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-blog-post">
-                                    <div class="pq-post-media">
-                                        <img decoding="async" src="{% static 'images/blog/the-versatility-of-tan-brown-granite.webp' %}" alt="Tan Brown Granite Blogs">
-                                        <div class="pq-post-category">
-                                            <a href="./the-versatility-of-tan-brown-granite">Tan Brown</a>
-                                        </div>
-                                    </div>
-                                    <div class="pq-blog-contain">
-                                        <div class="pq-post-meta">
-                                            <ul>
-                                                <li class="pq-post-meta">
-                                                    <a href="./the-versatility-of-tan-brown-granite">December 21, 2023</a>
-                                                </li>
-                                                <li class="pq-post-comment">
-                                                    <a href="./the-versatility-of-tan-brown-granite">9 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="pq-blog-title">
-                                            <a href="./the-versatility-of-tan-brown-granite">
-                                                The Versatility of Tan Brown Granite
-                                            </a>
-                                        </h5>
-                                        <p>Discover the many applications of Tan Brown granite in various home designs.</p>
-                                        <div class="pq-btn-container">
-                                            <a href="./the-versatility-of-tan-brown-granite"
-                                                class="pq-button pq-button-link">
-                                                <div class="pq-button-block">
-                                                    <div class="pq-svg">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64.356"
-                                                            height="36.52" viewBox="0 0 64.356 36.52">
-                                                            <g transform="translate(-6.444 -1.74)">
-                                                                <g data-name="Group 2">
-                                                                    <circle data-name="Ellipse 2" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1"
-                                                                        opacity="0.5"></circle>
-                                                                    <circle data-name="Ellipse 3" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1">
-                                                                    </circle>
-                                                                </g>
-                                                                <path data-name="Path 1"
-                                                                    d="M49.525,14.265l-.627.779,5.583,4.5H6.444v1h48.02L48.9,24.954l.621.783L56.7,20.044Z"
-                                                                    fill="#30373f"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <span class="pq-button-text">read more </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-blog-post">
-                                    <div class="pq-post-media">
-                                        <img decoding="async" src="{% static 'images/blog/galaxy-granite-an-overview.webp' %}" alt="Galaxy Granite Blogs">
-                                        <div class="pq-post-category">
-                                            <a href="./galaxy-granite-an-overview">Galaxy</a>
-                                        </div>
-                                    </div>
-                                    <div class="pq-blog-contain">
-                                        <div class="pq-post-meta">
-                                            <ul>
-                                                <li class="pq-post-meta">
-                                                    <a href="./galaxy-granite-an-overview">November 3, 20223</a>
-                                                </li>
-                                                <li class="pq-post-comment">
-                                                    <a href="./galaxy-granite-an-overview">8 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="pq-blog-title">
-                                            <a href="./galaxy-granite-an-overview">
-                                                Galaxy Granite: An Overview
-                                            </a>
-                                        </h5>
-                                        <p>Understand why Galaxy granite is a popular choice for luxurious homes.</p>
-                                        <div class="pq-btn-container">
-                                            <a href="./galaxy-granite-an-overview"
-                                                class="pq-button pq-button-link">
-                                                <div class="pq-button-block">
-                                                    <div class="pq-svg">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64.356"
-                                                            height="36.52" viewBox="0 0 64.356 36.52">
-                                                            <g transform="translate(-6.444 -1.74)">
-                                                                <g data-name="Group 2">
-                                                                    <circle data-name="Ellipse 2" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1"
-                                                                        opacity="0.5"></circle>
-                                                                    <circle data-name="Ellipse 3" cx="17" cy="17.76"
-                                                                        r="17.76" transform="translate(34.78 2.24)"
-                                                                        fill="none" stroke="#30373f" stroke-width="1">
-                                                                    </circle>
-                                                                </g>
-                                                                <path data-name="Path 1"
-                                                                    d="M49.525,14.265l-.627.779,5.583,4.5H6.444v1h48.02L48.9,24.954l.621.783L56.7,20.044Z"
-                                                                    fill="#30373f"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <span class="pq-button-text">read more </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
+                            
                         </div>
                     </div>
                 </div>

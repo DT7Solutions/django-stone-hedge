@@ -136,7 +136,10 @@
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item {% if navbar == 'Blogs' %} current-menu-item {% endif %}">
+                                                <li class="menu-item {% if navbar == 'Gallery' %} current-menu-item {% endif %}">
+                                                    <a href="/gallery/">Gallery</a>
+                                                </li>
+                                                <li class="menu-item {% if navbar == 'Blog' %} current-menu-item {% endif %}">
                                                     <a href="/blogs/">Blogs</a>
                                                 </li>
                                                 <li class="menu-item {% if navbar == 'Contact' %} current-menu-item {% endif %}">
@@ -197,19 +200,22 @@
                                 <h4 class="footer-title">Quick Links</h4>
                                 <div class="menu-navigate-menu-container">
                                     <ul id="menu-navigate-menu" class="menu">
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Home' %} current-menu-item {% endif %}">
                                             <a href="/" aria-current="page">Home</a>
                                         </li>
-                                        <li class="menu-item">
-                                            <a href="/about/">About Us</a>
+                                        <li class="menu-item {% if navbar == 'About' %} current-menu-item {% endif %}">
+                                            <a href="/about/">About</a>
                                         </li>
-                                        <li class="menu-item">
-                                            <a href="/products/">Our Services</a>
+                                        <li class="menu-item {% if navbar == 'Products' %} current-menu-item {% endif %}">
+                                            <a href="/products/">Products</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Gallery' %} current-menu-item {% endif %}">
+                                            <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="menu-item {% if navbar == 'Blog' %} current-menu-item {% endif %}">
                                             <a href="/blogs/">Blogs</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Contact' %} current-menu-item {% endif %}">
                                             <a href="/contact/">Contact</a>
                                         </li>
                                     </ul>
@@ -222,22 +228,22 @@
                                 <h4 class="footer-title">Our Services</h4>
                                 <div class="menu-product-menu-container">
                                     <ul id="menu-product-menu" class="menu">
-                                        <li class="menu-item">
-                                            <a href="/steel-grey-light/">Steel Grey Light Granite</a>
+                                        <li class="menu-item {% if navbar == 'Steelgraylight' %} current-menu-item a {% endif %}">
+                                            <a href="/steel-grey-light/" aria-current="page">Steel Grey Light Granite</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Steelgraydark' %} current-menu-item a {% endif %}">
                                             <a href="/steel-grey-dark/">Steel Grey Dark Granite</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Blackpearl' %} current-menu-item a {% endif %}">
                                             <a href="/black-pearl/">Black Pearl Granite</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Maplered' %} current-menu-item a {% endif %}">
                                             <a href="/maple-red/">Maple Red Granite</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Tanbrown' %} current-menu-item a {% endif %}">
                                             <a href="/tan-brown/">Tan Brown Granite</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li class="menu-item {% if navbar == 'Galaxy' %} current-menu-item a {% endif %}">
                                             <a href="/galaxy/">Galaxy Granite</a>
                                         </li>
                                     </ul>
@@ -310,8 +316,10 @@
     <script src="{% static 'js/jquery.countTo.min.js' %}"></script>
     <!-- Wow -->
     <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Lightbox Popup -->
+    <script src="{% static 'js/fslightbox.js' %}"></script>
     <!-- Magnefic Popup -->
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script> -->
     <!-- Revslider -->
     <script src="{% static 'rev/js/rbtools.min.js' %}"></script>
     <script src="{% static 'rev/js/rs6.min.js' %}"></script>
