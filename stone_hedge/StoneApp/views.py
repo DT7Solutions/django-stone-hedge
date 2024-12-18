@@ -75,7 +75,7 @@ def galaxy(request):
     return render(request, 'uifiles/galaxy.html', {'navbar':'Galaxy'})
     
 def blogs(request):
-    blog = BlogPost.objects.filter().order_by('-Id')
+    blog = BlogPost.objects.filter(status=1).order_by('-Id')
     
     # allposts = BlogPost.objects.all()
     paginator = Paginator(blog, 9) 
